@@ -1,0 +1,55 @@
+{
+  "name": "@toyjhlee/react-ui",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "build": "rm -rf build && rollup -c",
+    "test": "jest",
+    "publish": "npm publish --access=public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toyjhlee/react-ui.git"
+  },
+  "author": "toyjhlee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/toyjhlee/react-ui/issues"
+  },
+  "homepage": "https://github.com/toyjhlee/react-ui#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.15",
+    "@types/react": "^16.9.56",
+    "@types/react-dom": "^16.9.9",
+    "@types/react-test-renderer": "^16.9.3",
+    "jest": "^26.6.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts-ts": "^3.1.0",
+    "react-test-renderer": "^17.0.1",
+    "rollup": "^2.33.1",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.29.0",
+    "ts-jest": "^26.4.4",
+    "typescript": "^4.0.5"
+  },
+  "peerDependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "<rootDir>/build/"
+    ]
+  },
+  "files": [
+    "build"
+  ],
+  "main": "build/index.tsx",
+  "module": "build/index.es.js",
+  "jsnext:main": "build/index.es.js"
+}
