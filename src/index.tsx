@@ -1,12 +1,12 @@
-import React from 'react'
+import ExampleComponent from './components/example/ExampleComponent'
 
-type Props = {text: string}
+// type Props = {text: string}
 
-function ExampleComponent(props: Props): React.ReactElement {
-  const {text} = props
+// function ExampleComponent(props: Props): React.ReactElement {
+//   const {text} = props
 
-  return <div style={{color: 'red'}}>Hello {text}</div>
-}
+//   return <div style={{color: 'red'}}>Hello {text}</div>
+// }
 
 // class ExampleComponent extends React.Component<Props> {
 //   render() {
@@ -16,4 +16,4 @@ function ExampleComponent(props: Props): React.ReactElement {
 //   }
 // }
 
-export {ExampleComponent}
+export default {ExampleComponent}
