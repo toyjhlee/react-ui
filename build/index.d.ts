@@ -1,6 +1,5 @@
-import React from 'react';
-declare type Props = {
-    text: string;
+import DropDown from './components/navigation/DropDown';
+declare const _default: {
+    DropDown: typeof DropDown;
 };
-declare function ExampleComponent(props: Props): React.ReactElement;
-export { ExampleComponent };
+export default _default;

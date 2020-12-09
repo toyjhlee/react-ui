@@ -34,6 +34,8 @@ export default {
     commonjs({
       include: ['node_modules/**'],
       namedExports: {
+        react: Object.keys(require('react')),
+        'react-is': Object.keys(require('react-is')),
         'node_modules/react/react.js': [
           'Children',
           'Component',
