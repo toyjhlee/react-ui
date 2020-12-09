@@ -12,6 +12,30 @@ module.exports = {
   components: ['src/components/**/*.tsx', 'src/components/*.tsx'],
   version,
   ignore,
+  template: {
+    head: {
+      links: [
+        {
+          rel: 'stylesheet',
+          href:
+            'https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css',
+        },
+        {
+          rel: 'stylesheet',
+          href: 'src/assets/styles/reset.css',
+        },
+        {
+          rel: 'stylesheet',
+          href: 'src/assets/styles/base.css',
+        },
+      ],
+    },
+  },
+  theme: {
+    fontFamily: {
+      base: '"Spoqa Han Sans", sans-serif',
+    },
+  },
   //   sections: [
   //     {
   //       name: 'test',
@@ -27,7 +51,7 @@ module.exports = {
   webpackConfig: {
     devServer: {
       // Docs: https://codesandbox.io/docs/environment#how-can-i-tell-if-i-am-in-a-container-sandbox
-      disableHostCheck: !!process.env.CODESANDBOX_SSE,
+      //   disableHostCheck: !!process.env.CODESANDBOX_SSE,
     },
     module: {
       rules: [
