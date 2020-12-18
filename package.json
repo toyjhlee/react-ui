@@ -62,6 +62,7 @@
   "jsnext:main": "build/index.es.js",
   "dependencies": {
     "@types/styled-components": "^5.1.4",
+    "desandro-get-style-property": "^1.0.4",
     "styled-components": "^5.2.1"
   },
   "resolutions": {
