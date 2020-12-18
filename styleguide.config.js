@@ -36,6 +36,7 @@ module.exports = {
       base: '"Spoqa Han Sans", sans-serif',
     },
   },
+  styleguideDir: 'docs',
   //   sections: [
   //     {
   //       name: 'test',

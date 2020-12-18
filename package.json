@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "build": "rm -rf build && rollup -c",
+    "build:docs": "styleguidist build",
     "test": "jest --watch  --coverage",
     "publish": "npm publish --access=public",
     "docs": "styleguidist server"
