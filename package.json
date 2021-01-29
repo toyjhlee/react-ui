@@ -5,7 +5,8 @@
   "scripts": {
     "build": "rm -rf build && rollup -c",
     "build:docs": "styleguidist build",
-    "test": "jest --watch  --coverage",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch --coverage",
     "publish": "npm publish --access=public",
     "docs": "styleguidist server"
   },
@@ -55,11 +56,6 @@
       "<rootDir>/build/"
     ]
   },
-  "husky": {
-    "hooks": {
-      "pre-push": "npm run test a"
-    }
-  },
   "files": [
     "build"
   ],
@@ -67,9 +63,9 @@
   "module": "build/index.es.js",
   "jsnext:main": "build/index.es.js",
   "dependencies": {
+    "@jsdevtools/npm-publish": "^1.4.3",
     "@types/styled-components": "^5.1.4",
     "desandro-get-style-property": "^1.0.4",
-    "husky": "^4.3.8",
     "styled-components": "^5.2.1"
   },
   "resolutions": {
