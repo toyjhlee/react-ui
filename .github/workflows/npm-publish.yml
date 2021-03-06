@@ -9,8 +9,9 @@ jobs:
         with:
           node-version: 10
       - run: npm install
-      # - run: npm test a
+      - run: npm test a
       - run: npm run build
+      - run: npm run build:docs
       - uses: JS-DevTools/npm-publish@v1
         with:
           token: 0cc265a5-571d-4064-a4e8-309457235bb0
