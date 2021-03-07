@@ -5,6 +5,7 @@
 ```js
 import React, {useState} from 'react'
 import styled from 'styled-components'
+import * as mockImg from '../../mock/mockImg'
 import Image from './Image'
 const Box = styled.article`
   width: 100px;
@@ -16,37 +17,36 @@ const Contents = styled.div`
   display: flex;
 `
 ;(() => {
-  const url =
-    'https://interactive-examples.mdn.mozilla.net/media/examples/plumeria.jpg'
   return (
     <>
       <Contents>
-        <dl>
-          <dt>contain</dt>
-          <dd>
-            <Box>
-              <Image url={url} type={'contain'} />
-            </Box>
-          </dd>
-        </dl>
+        {['contain', 'cover', 'cover'].map(name => {
+          return (
+            <dl>
+              <dt>{name}</dt>
+              <dd>
+                <Box>
+                  <Image url={mockImg.vertical} type={name} />
+                </Box>
+              </dd>
+            </dl>
+          )
+        })}
+      </Contents>
 
-        <dl>
-          <dt>cover</dt>
-          <dd>
-            <Box>
-              <Image url={url} type={'cover'} />
-            </Box>
-          </dd>
-        </dl>
-
-        <dl>
-          <dt>original</dt>
-          <dd>
-            <Box>
-              <Image url={url} type={'original'} />
-            </Box>
-          </dd>
-        </dl>
+      <Contents>
+        {['contain', 'cover', 'cover'].map(name => {
+          return (
+            <dl>
+              <dt>{name}</dt>
+              <dd>
+                <Box>
+                  <Image url={mockImg.horizontal} type={name} />
+                </Box>
+              </dd>
+            </dl>
+          )
+        })}
       </Contents>
     </>
   )
@@ -58,11 +58,8 @@ const Contents = styled.div`
 ```js
 import React, {useState} from 'react'
 import styled from 'styled-components'
+import * as mockImg from '../../mock/mockImg'
 import Image from './Image'
-const Box = styled.article`
-  width: 100%;
-  height: 100%;
-`
 const Contents = styled.div`
   display: flex;
 
@@ -76,37 +73,51 @@ const Contents = styled.div`
   }
 `
 ;(() => {
-  const url =
-    'https://interactive-examples.mdn.mozilla.net/media/examples/plumeria.jpg'
   return (
     <>
       <Contents>
-        <dl>
-          <dt>contain</dt>
-          <dd>
-            <Box>
-              <Image url={url} type={'contain'} disabledObjectFit={true} />
-            </Box>
-          </dd>
-        </dl>
-
-        <dl>
-          <dt>cover</dt>
-          <dd>
-            <Box>
-              <Image url={url} type={'cover'} disabledObjectFit={true} />
-            </Box>
-          </dd>
-        </dl>
-
-        <dl>
-          <dt>original</dt>
-          <dd>
-            <Box>
-              <Image url={url} type={'original'} disabledObjectFit={true} />
-            </Box>
-          </dd>
-        </dl>
+        {['contain', 'cover', 'cover'].map(name => {
+          return (
+            <dl>
+              <dt>{name}</dt>
+              <dd>
+                <Image
+                  url={mockImg.vertical}
+                  type={name}
+                  disabledObjectFit={true}
+                />
+              </dd>
+            </dl>
+          )
+        })}
+      </Contents>
+      <Contents>
+        {['contain', 'cover', 'cover'].map(name => {
+          return (
+            <dl>
+              <dt>{name}</dt>
+              <dd>
+                <objectfit src={mockImg.vertical} />
+              </dd>
+            </dl>
+          )
+        })}
+      </Contents>
+      <Contents>
+        {['contain', 'cover', 'cover'].map(name => {
+          return (
+            <dl>
+              <dt>{name}</dt>
+              <dd>
+                <Image
+                  url={mockImg.horizontal}
+                  type={name}
+                  disabledObjectFit={true}
+                />
+              </dd>
+            </dl>
+          )
+        })}
       </Contents>
     </>
   )
