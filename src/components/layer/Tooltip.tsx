@@ -48,7 +48,7 @@ function Tooltip(props: TooltipProps) {
   const onClick = (e: React.MouseEvent) => {
     if (props.clickable === false) return
     e.stopPropagation()
-    setVisible(true)
+    setVisible(!visible)
   }
 
   const onClickClose = () => {

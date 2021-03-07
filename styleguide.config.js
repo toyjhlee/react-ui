@@ -2,6 +2,7 @@ const {version} = require('./package')
 
 const ignore = [
   '**/__tests__/**',
+  '**/mock/**',
   '**/*.test.{js,jsx,ts,tsx}',
   '**/*.spec.{js,jsx,ts,tsx}',
   '**/*.d.ts',
