@@ -6,7 +6,7 @@ const supportsObjectFit = !!getStyleProp('objectFit')
 
 export type ObjectFit = 'contain' | 'cover' | 'original'
 
-interface ImageProps {
+interface Props {
   url: string
   type: ObjectFit
   disabledObjectFit: boolean
@@ -17,7 +17,7 @@ Image.defaultProps = {
   disabledObjectFit: false,
 }
 
-function Image(props: ImageProps) {
+function Image(props: Props) {
   let isUsingObjectFit = supportsObjectFit && props.type !== 'original'
 
   if (props.disabledObjectFit) {
