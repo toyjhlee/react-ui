@@ -1,6 +1,6 @@
 {
   "name": "@toyjhlee/react-ui",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "",
   "scripts": {
     "build": "rm -rf build && rollup -c",
@@ -8,6 +8,7 @@
     "test": "jest --coverage",
     "test:watch": "jest --watch --coverage",
     "publish": "npm publish --access=public",
+    "push": "git push origin master --tags && npm run build && npm publish --access=public",
     "docs": "styleguidist server"
   },
   "repository": {
