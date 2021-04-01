@@ -8,6 +8,7 @@
     "test": "jest --coverage",
     "test:watch": "jest --watch --coverage",
     "publish": "npm publish --access=public",
+    "push": "git push origin master --tags && npm run build && npm publish --access=public",
     "docs": "styleguidist server"
   },
   "repository": {
