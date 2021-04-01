@@ -33,5 +33,6 @@ jobs:
       - run: npm run build:docs
       - uses: JS-DevTools/npm-publish@v1
         with:
+          tag: 'latest'
           access: 'public'
           token: ${{secrets.npm_token}}
